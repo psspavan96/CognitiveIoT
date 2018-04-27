@@ -3,7 +3,7 @@ import numpy as np
 import os,glob,cv2
 import sys,argparse
 
-classes = ['Bus','car','cat','dog']
+classes = ['cat','dog']
 # First, pass the path of the image
 dir_path = os.path.dirname(os.path.realpath(__file__))
 image_path=sys.argv[1]
@@ -26,9 +26,9 @@ x_batch = images.reshape(1, image_size,image_size,num_channels)
 ## Let us restore the saved model 
 sess = tf.Session()
 # Step-1: Recreate the network graph. At this step only graph is created.
-saver = tf.train.import_meta_graph('C:\\model1\\tm.meta')
+saver = tf.train.import_meta_graph('/Users/pavanpss/Documents/model/tm.meta')
 # Step-2: Now let's load the weights saved using the restore method.
-saver.restore(sess, tf.train.latest_checkpoint("C:\\model1"))
+saver.restore(sess, tf.train.latest_checkpoint("/Users/pavanpss/Documents/model"))
 
 # Accessing the default graph which we have restored
 graph = tf.get_default_graph()
