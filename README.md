@@ -1,1 +1,1 @@
-# dogscats
+# Cognitive IoT System for Visually Impaired
