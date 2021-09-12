@@ -3,7 +3,7 @@ import numpy as np
 import os,glob,cv2
 import sys,argparse
 
-classes = ['cat','dog']
+classes = ['Bus','car','cat','dog']
 # First, pass the path of the image
 dir_path = os.path.dirname(os.path.realpath(__file__))
 image_path=sys.argv[1]
